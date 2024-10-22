@@ -11,7 +11,7 @@ from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from pathlib import Path
-dotenv_path = Path(__file__).resolve().parent.parent / '.env'
+dotenv_path = Path(__file__).resolve().parent / '.env'
 
 # Loading the .env file
 load_dotenv(dotenv_path)
@@ -307,4 +307,4 @@ def update_user_profile():
 
 # Running the application
 if __name__ == '__main__':
-    app.run(port = 5555,debug=True)
+    app.run(debug= False)
